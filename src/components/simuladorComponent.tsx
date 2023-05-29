@@ -16,7 +16,7 @@ import InputLabel from "@mui/material/InputLabel";
 import OutlinedInput from "@mui/material/OutlinedInput";
 import Slider from "@mui/material/Slider";
 
-import { LoanContext } from "../context/LoanContext";
+import { LoanContext } from "../context/loan/LoanContext";
 import { formatInputToMoney } from "../helpers/format-input-to-money.helper";
 import { formatter } from "../helpers/";
 

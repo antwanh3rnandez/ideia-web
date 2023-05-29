@@ -200,7 +200,7 @@ function HeroSection() {
             slidesPerView={slidesPerView}
             navigation
             pagination={{ clickable: true }}
-            // autoplay={{ delay: 3000 }}
+            autoplay={{ delay: 3000 }}
             style={{
             maxWidth: '70%',
             paddingTop: '20px'
