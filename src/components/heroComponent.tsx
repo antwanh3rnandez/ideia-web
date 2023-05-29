@@ -194,7 +194,7 @@ function HeroSection() {
           />
         </div>
       </div>
-      <Box sx={{ display: 'flex', justifyContent: 'center', position: 'relative', top: '-100px', maxHeight: '450px' }}>
+      <Box sx={{ display: 'flex', justifyContent: 'center', position: 'relative', top: '-80px', maxHeight: '450px' }}>
         <Swiper
             spaceBetween={40}
             slidesPerView={slidesPerView}
