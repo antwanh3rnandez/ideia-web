@@ -1,0 +1,13 @@
+
+body{
+  margin: 0;
+  padding: 0;
+  background: #F0F0F0;
+}
+
+:root {
+  --dark-blue: #072833;
+  --primary: #000000;
+  --secondary: #FFE900;
+  --gray: #F0F0F0;
+}
