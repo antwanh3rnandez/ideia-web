@@ -1,4 +1,3 @@
-import React from 'react';
 import { Typography, Container } from '@mui/material';
 
 import { useContext } from "react";
@@ -16,14 +15,14 @@ import InputLabel from "@mui/material/InputLabel";
 import OutlinedInput from "@mui/material/OutlinedInput";
 import Slider from "@mui/material/Slider";
 
-import { LoanContext } from "../context/loan/LoanContext";
+import { LoanContext } from "../context/loan/";
 import { formatInputToMoney } from "../helpers/format-input-to-money.helper";
 import { formatter } from "../helpers/";
 
-interface Props {
-    title: string;
-    paragraph: string;
-  }
+// interface Props {
+//     title: string;
+//     paragraph: string;
+//   }
 
 const Simulador = ({ }) => {
     
@@ -43,6 +42,7 @@ const Simulador = ({ }) => {
       const handlePropertyValue = (value: string) => {
         const amount = Number(value.replace(/[^0-9.]/g, ""));
         setPropertyValue(amount);
+        console.log(amount);
       };
 
     return (
@@ -97,6 +97,7 @@ const Simulador = ({ }) => {
                                                 }
                                                 placeholder="1,000,000"
                                                 onChange={(e) => {
+                                                console.log(e.target.value);
                                                 handlePropertyValue(e.target.value);
                                                 }}
                                                 startAdornment={
@@ -223,13 +224,13 @@ const Simulador = ({ }) => {
                                         <Box sx={{ display: "flex", gap: 1, mb: 1 }}>
                                             <Typography>Enganche: </Typography>
                                             <Typography fontWeight="700">
-                                            {formatter.money(downPayment)} MXN
+                                            {formatter?.money(downPayment)} MXN
                                             </Typography>
                                         </Box>
                                         <Box sx={{ display: "flex", gap: 1, mb: 1 }}>
                                             <Typography>Monto prestado: </Typography>
                                             <Typography fontWeight="700">
-                                            {formatter.money(loanAmount)} MXN
+                                            {formatter?.money(loanAmount)} MXN
                                             </Typography>
                                         </Box>
                                         <Box sx={{ display: "flex", gap: 1, mb: 1 }}>
@@ -261,7 +262,7 @@ const Simulador = ({ }) => {
                                         <NextLink href="/first-step" passHref>
                                             <Button
                                             variant="contained"
-                                            color="primary"
+
                                             size="large"
                                             fullWidth
                                             sx={{ mt: 2, background: '#000' }}
