@@ -14,6 +14,7 @@ import 'swiper/css/scrollbar';
 import FacebookRoundedIcon from '@mui/icons-material/FacebookRounded';
 import InstagramIcon from '@mui/icons-material/Instagram';
 import TwitterIcon from '@mui/icons-material/Twitter';
+import { IconBrandTiktok } from '@tabler/icons-react';
 
 import SwiperCore, { Autoplay, Navigation, Pagination } from "swiper/core";
 SwiperCore.use([Autoplay, Navigation, Pagination]);
@@ -290,13 +291,22 @@ const Sectores = ({ }) => {
                         </SwiperSlide>
                     </Swiper>
                 </Container>
-            <div style={{ display: 'flex', justifyContent: 'center', marginTop: '5px'}}>
+            {/* <div style={{ display: 'flex', justifyContent: 'center', marginTop: '5px'}}>
                 <img src={monito} alt="Ideio" style={{ width: '25vw', minWidth: '25vh'}} />
-            </div>
+            </div> */}
             <div style={{display: 'flex', flexDirection: 'row', justifyContent: 'center', alignItems: 'center', padding: '15px' }}>
-                <FacebookRoundedIcon fontSize='large'/>
-                <InstagramIcon fontSize='large'/>
-                <TwitterIcon fontSize='large'/>
+                <a href="https://www.facebook.com/profile.php?id=100092549126465" target='_blank'>
+                    <FacebookRoundedIcon style={{ fontSize: '4rem', color: 'var(--primary)' }} />
+                </a>
+                <a href="https://www.instagram.com/yosoyideia/" target='_blank'>
+                    <InstagramIcon style={{ fontSize: '4rem', color: 'var(--primary)' }} />
+                </a>
+                <a href="https://twitter.com/yosoyideia/" target='_blank'>
+                    <TwitterIcon style={{ fontSize: '4rem', color: 'var(--primary)' }} />
+                </a>
+                <a href="https://www.tiktok.com/@yosoyideia" target='_blank'>
+                    <IconBrandTiktok width='4rem' height='4rem' style={{ color: 'var(--primary)' }} />
+                </a>
             </div>
             </Container>
             

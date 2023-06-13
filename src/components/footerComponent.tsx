@@ -4,6 +4,7 @@ import { Grid, Typography, Container } from '@mui/material';
 import FacebookIcon from '@mui/icons-material/Facebook';
 import InstagramIcon from '@mui/icons-material/Instagram';
 import TwitterIcon from '@mui/icons-material/Twitter';
+import { IconBrandTiktok } from '@tabler/icons-react';
 
 const Footer = () => {
   return (
@@ -51,9 +52,18 @@ const Footer = () => {
             </Typography>
           </Grid>
           <Grid item xs={12} sm={12} md={6}>
-            <FacebookIcon/>
-            <InstagramIcon/>
-            <TwitterIcon/>
+            <a href="https://www.facebook.com/profile.php?id=100092549126465" target='_blank'>
+              <FacebookIcon style={{ color: 'white' }} />
+            </a>
+            <a href="https://www.instagram.com/yosoyideia/" target='_blank'>
+              <InstagramIcon style={{ color: 'white' }} />
+            </a>
+            <a href="https://twitter.com/yosoyideia/" target='_blank'>    
+              <TwitterIcon style={{ color: 'white' }} />
+            </a>
+            <a href="https://www.tiktok.com/@yosoyideia" target='_blank'>
+              <IconBrandTiktok style={{ color: 'white' }} />
+            </a>
           </Grid>
         </Grid>
       </Container>

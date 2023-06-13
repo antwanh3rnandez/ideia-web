@@ -16,7 +16,8 @@ export default defineConfig({
         families: [
           'Bebas Neue',
           'Rubik',
-          'Roboto'
+          'Roboto',
+          'Poppins'
           // Agrega otras fuentes si lo deseas
         ]
       }
