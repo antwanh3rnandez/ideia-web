@@ -9,9 +9,7 @@ export default function MyApp() {
   return (
     <div>
       <HeroSection />
-      {/* <LoanContextProvider> */}
-        <Simulador />
-      {/* </LoanContextProvider> */}
+      <Simulador />
       <Sectores/>
       <Footer/>
     </div>
