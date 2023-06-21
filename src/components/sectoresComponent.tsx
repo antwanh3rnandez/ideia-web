@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import { Typography, Container, Button } from '@mui/material';
 
-import monito from '../assets/monito.png';
+// import monito from '../assets/monito.png';
 
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/swiper.min.css';
