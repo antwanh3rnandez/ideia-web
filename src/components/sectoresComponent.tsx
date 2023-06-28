@@ -54,7 +54,7 @@ const Sectores = ({ }) => {
                         <SwiperSlide>
                             <Container className="card" sx={{borderRadius: '25px'}}>
                                     <div className="card-header" style={{background: 'var(--secondary)', borderTopRightRadius: '15px', borderTopLeftRadius: '15px', padding:'10px'}}>
-                                        <Typography variant="h5" component="div" sx={{ color: 'var(--primary)' ,fontFamily: 'Roboto, sans-serif'}}>
+                                        <Typography variant="h5" component="div" sx={{ color: 'var(--primary)'}}>
                                         Sector Alimenticio
                                         </Typography>
                                     </div>
@@ -88,7 +88,7 @@ const Sectores = ({ }) => {
                         <SwiperSlide>
                             <Container className="card" sx={{borderRadius: '25px'}}>
                                 <div className="card-header" style={{background: 'var(--secondary)', borderTopRightRadius: '15px', borderTopLeftRadius: '15px', padding:'10px'}}>
-                                    <Typography variant="h5" component="div" sx={{ color: 'var(--primary)' ,fontFamily: 'Roboto, sans-serif'}}>
+                                    <Typography variant="h5" component="div" sx={{ color: 'var(--primary)'}}>
                                     Sector Automotriz
                                     </Typography>
                                 </div>
@@ -122,7 +122,7 @@ const Sectores = ({ }) => {
                         <SwiperSlide>
                             <Container className="card" sx={{borderRadius: '25px'}}>
                                 <div className="card-header" style={{background: 'var(--secondary)', borderTopRightRadius: '15px', borderTopLeftRadius: '15px', padding:'10px'}}>
-                                    <Typography variant="h5" component="div" sx={{ color: 'var(--primary)' ,fontFamily: 'Roboto, sans-serif'}}>
+                                    <Typography variant="h5" component="div" sx={{ color: 'var(--primary)'}}>
                                     Sector Farmaceutico
                                     </Typography>
                                 </div>
@@ -156,7 +156,7 @@ const Sectores = ({ }) => {
                         <SwiperSlide>
                             <Container className="card" sx={{borderRadius: '25px'}}>
                                 <div className="card-header" style={{background: 'var(--secondary)', borderTopRightRadius: '15px', borderTopLeftRadius: '15px', padding:'10px'}}>
-                                    <Typography variant="h5" component="div" sx={{ color: 'var(--primary)' ,fontFamily: 'Roboto, sans-serif'}}>
+                                    <Typography variant="h5" component="div" sx={{ color: 'var(--primary)'}}>
                                     Sector Logística
                                     </Typography>
                                 </div>
@@ -190,7 +190,7 @@ const Sectores = ({ }) => {
                         <SwiperSlide>
                             <Container className="card" sx={{borderRadius: '25px'}}>
                                 <div className="card-header" style={{background: 'var(--secondary)', borderTopRightRadius: '15px', borderTopLeftRadius: '15px', padding:'10px'}}>
-                                    <Typography variant="h5" component="div" sx={{ color: 'var(--primary)' ,fontFamily: 'Roboto, sans-serif'}}>
+                                    <Typography variant="h5" component="div" sx={{ color: 'var(--primary)'}}>
                                     Plazas Comerciales
                                     </Typography>
                                 </div>
@@ -224,7 +224,7 @@ const Sectores = ({ }) => {
                         <SwiperSlide>
                             <Container className="card" sx={{borderRadius: '25px'}}>
                                 <div className="card-header" style={{background: 'var(--secondary)', borderTopRightRadius: '15px', borderTopLeftRadius: '15px', padding:'10px'}}>
-                                    <Typography variant="h5" component="div" sx={{ color: 'var(--primary)' ,fontFamily: 'Roboto, sans-serif'}}>
+                                    <Typography variant="h5" component="div" sx={{ color: 'var(--primary)'}}>
                                     Sector PyME
                                     </Typography>
                                 </div>
@@ -258,7 +258,7 @@ const Sectores = ({ }) => {
                         <SwiperSlide>
                             <Container className="card" sx={{borderRadius: '25px'}}>
                                 <div className="card-header" style={{background: 'var(--secondary)', borderTopRightRadius: '15px', borderTopLeftRadius: '15px', padding:'10px'}}>
-                                    <Typography variant="h5" component="div" sx={{ color: 'var(--primary)' ,fontFamily: 'Roboto, sans-serif'}}>
+                                    <Typography variant="h5" component="div" sx={{ color: 'var(--primary)'}}>
                                     Sector Vialidad
                                     </Typography>
                                 </div>

@@ -67,7 +67,7 @@ const Simulador = ({ }) => {
         <div style={{ width:'100%', height: customClass }}>
             <Container 
                 sx={{position: 'relative', 
-                    top: '380px',
+                    top: '400px',
                     height: '100%'
                 }}>
                     <Typography variant="h4" gutterBottom fontWeight={400} sx={{fontFamily: 'Poppins, sans-serif'}}>

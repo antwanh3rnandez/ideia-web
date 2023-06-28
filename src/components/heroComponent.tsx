@@ -7,7 +7,7 @@ import LoginIcon from '@mui/icons-material/Login';
 import {
     Box,
     Button,
-    // Card,
+    Card,
     Divider,
     Drawer,
     // Grid,
@@ -127,8 +127,28 @@ function HeroSection() {
           ) : (
             <>
                 <IconButton edge="end" color="inherit" aria-label="menu" style={{marginRight: '5px'}}>
-                <HomeIcon />
-                <Typography variant='h6' component="div">Home</Typography>
+                <Box 
+                    sx={{   
+                            padding: '3px',
+                            display: 'flex',
+                            flexDirection: 'row',
+                            alignItems: 'center',
+                            '&:hover': {
+                            color: 'var(--primary)',
+                            background: 'var(--secondary)',
+                            borderRadius: '10px',
+                            padding: '3px'
+                            },
+                        }}
+                >
+                    <HomeIcon />
+                    <Typography 
+                        variant='h6' 
+                        component="div"
+                    >
+                    Home
+                    </Typography>
+                </Box>
                 </IconButton>
                 {/* <IconButton
                     edge="end"
@@ -152,7 +172,21 @@ function HeroSection() {
                 <Typography variant='h6' component="div">Contacto</Typography>
                 </IconButton> */}
                 <IconButton edge="end" color="inherit" aria-label="menu" style={{marginRight: '5px'}}>
-                <Typography variant='h6' component="div">Simulador</Typography>
+                <Typography 
+                    variant='h6' 
+                    component="div" 
+                    sx={{
+                        padding: '3px',
+                        '&:hover': {
+                            color: 'var(--primary)',
+                            background: 'var(--secondary)',
+                            borderRadius: '10px',
+                            padding: '3px'
+                        },
+                        }}
+                    >
+                Simulador
+                </Typography>
                 </IconButton>
                 {/* <IconButton edge="end" color="inherit" aria-label="menu" style={{marginRight: '5px'}}>
                 <Typography variant='h6' component="div">Franquicias</Typography>
@@ -207,21 +241,81 @@ function HeroSection() {
             }}
         >
             <SwiperSlide>
-                <Container className="card" sx={{ borderRadius: '25px', maxWidth: '410px', height: '100%' }}>
-                    <div className="card-header" style={{ background: 'white', borderTopRightRadius: '15px', borderTopLeftRadius: '15px', paddingTop: '15px', paddingLeft: '15px', paddingRight: '15px' }}>
-                        <Typography variant="h5" component="div" sx={{ color: 'var(--primary)', fontFamily: 'Roboto, sans-serif' }}>
+                <Card
+                    sx={{
+                    display: 'flex',
+                    flexDirection: 'column',
+                    justifyContent: 'flex-start',
+                    alignItems: 'center',
+                    borderRadius: '15px',
+                    boxShadow: '0px 2px 4px rgba(0, 0, 0, 0.25)',
+                    overflow: 'hidden',
+                    height: '100%',
+                    }}
+                >
+                    <div
+                        style={{
+                            maxHeight: '264px', //240,
+                            display: 'flex',
+                            flexDirection: 'column',
+                            justifyContent: 'flex-start',
+                            alignItems: 'center',
+                            padding: '15px',
+                        }}
+                    >
+                        <Typography
+                            fontSize={18}
+                            fontWeight={800}
+                            sx={{
+                            fontFamily: 'Poppins, sans-serif',
+                            textAlign: 'center',
+                            marginBottom: '15px',
+                            }}
+                        >
                             Sector Inmobiliario
                         </Typography>
-                    </div>
-                    <div className="card-body" style={{ background: 'white', borderBottomRightRadius: '15px', borderBottomLeftRadius: '15px' }}>
-                        <Typography variant="body2" color="text.secondary" sx={{ mb: 1, paddingLeft: '15px', paddingRight: '15px' }}>
+                        <Typography
+                            fontSize={16}
+                            fontWeight={500}
+                            sx={{
+                            fontFamily: 'Poppins, sans-serif',
+                            textAlign: 'start',
+                            }}
+                        >
                         Realizamos estudios de mercado y opiniones de valor, así como la gestión de créditos hipotecarios y marketing para asegurar una estrategia eficaz en el sector inmobiliario.
                         </Typography>
-                        <div style={{ display: 'flex', justifyContent: 'center', marginTop: '5px', marginBottom: '5px' }}>
-                            <img src={hipotecario} alt="image" style={{ maxWidth: '100%', maxHeight: '100%' }} />
-                        </div>
-                        <div style={{ display: 'flex', justifyContent: 'center' }}>
-                            <Button variant="contained" sx={{
+                    </div>
+                    <div
+                        style={{
+                            width: '100%',
+                            height: '180px',
+                            // borderTopLeftRadius: '15px',
+                            // borderTopRightRadius: '15px',
+                            backgroundColor: 'black',
+                            overflow: 'hidden',
+                        }}
+                    >
+                        <img
+                            src={hipotecario}
+                            alt="Card Image"
+                            style={{
+                            width: '100%',
+                            height: '100%',
+                            objectFit: 'cover',
+                            objectPosition: 'center top',
+                            }}
+                        />
+                    </div>
+                    <div
+                        style={{
+                            display: 'flex',
+                            flexDirection: 'column',
+                            justifyContent: 'flex-start',
+                            alignItems: 'center',
+                            padding: '15px',
+                        }}
+                    >
+                        <Button variant="contained" sx={{
                             marginTop: '10px',
                             marginBottom: '10px',
                             alignSelf: 'flex-end',
@@ -234,20 +328,52 @@ function HeroSection() {
                             }
                             }}>
                             Botón
-                            </Button>
-                        </div>
+                        </Button>
                     </div>
-                </Container>
+                </Card>
             </SwiperSlide>
             <SwiperSlide>
-                <Container className="card" sx={{ borderRadius: '25px', maxWidth: '410px', height: '100%' }}>
-                    <div className="card-header" style={{ background: 'white', borderTopRightRadius: '15px', borderTopLeftRadius: '15px', paddingTop: '15px', paddingLeft: '15px', paddingRight: '15px' }}>
-                        <Typography variant="h5" component="div" sx={{ color: 'var(--primary)', fontFamily: 'Roboto, sans-serif' }}>
-                            Sector PyME
+                <Card
+                    sx={{
+                    display: 'flex',
+                    flexDirection: 'column',
+                    justifyContent: 'flex-start',
+                    alignItems: 'center',
+                    borderRadius: '15px',
+                    boxShadow: '0px 2px 4px rgba(0, 0, 0, 0.25)',
+                    overflow: 'hidden',
+                    height: '100%',
+                    }}
+                >
+                    <div
+                        style={{
+                            maxHeight: '264px', //240,
+                            display: 'flex',
+                            flexDirection: 'column',
+                            justifyContent: 'flex-start',
+                            alignItems: 'center',
+                            padding: '15px',
+                        }}
+                    >
+                        <Typography
+                            fontSize={18}
+                            fontWeight={800}
+                            sx={{
+                            fontFamily: 'Poppins, sans-serif',
+                            textAlign: 'center',
+                            marginBottom: '15px',
+                            }}
+                        >
+                        Sector PyME
                         </Typography>
-                    </div>
-                    <div className="card-body" style={{ background: 'white', borderBottomRightRadius: '15px', borderBottomLeftRadius: '15px' }}>
-                        <Typography variant="body2" color="text.secondary" sx={{ mb: 1, paddingLeft: '15px', paddingRight: '15px' }}>
+                        <Typography
+                            fontSize={16}
+                            fontWeight={500}
+                            sx={{
+                            fontFamily: 'Poppins, sans-serif',
+                            textAlign: 'start',
+                            }}
+                        >
                         Otorgamos créditos simples, revolventes, de arrendamiento para tu empresa y puedas: <br/>
                         &bull; Renovar instalaciones <br/>
                         &bull; Ampliar tecnología <br/>
@@ -255,11 +381,38 @@ function HeroSection() {
                         &bull; Pagar nóminas <br/>
                         &bull; Arrendar y subarrendar maquinaria <br/>
                         </Typography>
-                        <div style={{ display: 'flex', justifyContent: 'center', marginTop: '5px', marginBottom: '5px' }}>
-                            <img src={pyme} alt="image" style={{ maxWidth: '67%', maxHeight: '100%' }} />
-                        </div>
-                        <div style={{ display: 'flex', justifyContent: 'center' }}>
-                            <Button variant="contained" sx={{
+                    </div>
+                    <div
+                        style={{
+                            width: '100%',
+                            height: '180px',
+                            // borderTopLeftRadius: '15px',
+                            // borderTopRightRadius: '15px',
+                            backgroundColor: 'black',
+                            overflow: 'hidden',
+                        }}
+                    >
+                        <img
+                            src={pyme}
+                            alt="Card Image"
+                            style={{
+                            width: '100%',
+                            height: '100%',
+                            objectFit: 'cover',
+                            objectPosition: 'center top',
+                            }}
+                        />
+                    </div>
+                    <div
+                        style={{
+                            display: 'flex',
+                            flexDirection: 'column',
+                            justifyContent: 'flex-start',
+                            alignItems: 'center',
+                            padding: '15px',
+                        }}
+                    >
+                        <Button variant="contained" sx={{
                             marginTop: '10px',
                             marginBottom: '10px',
                             alignSelf: 'flex-end',
@@ -272,27 +425,86 @@ function HeroSection() {
                             }
                             }}>
                             Botón
-                            </Button>
-                        </div>
+                        </Button>
                     </div>
-                </Container>
+                </Card>
             </SwiperSlide>
             <SwiperSlide>
-                <Container className="card" sx={{ borderRadius: '25px', maxWidth: '410px', height: '100%' }}>
-                    <div className="card-header" style={{ background: 'white', borderTopRightRadius: '15px', borderTopLeftRadius: '15px', paddingTop: '15px', paddingLeft: '15px', paddingRight: '15px' }}>
-                        <Typography variant="h5" component="div" sx={{ color: 'var(--primary)', fontFamily: 'Roboto, sans-serif' }}>
+                <Card
+                    sx={{
+                    display: 'flex',
+                    flexDirection: 'column',
+                    justifyContent: 'flex-start',
+                    alignItems: 'center',
+                    borderRadius: '15px',
+                    boxShadow: '0px 2px 4px rgba(0, 0, 0, 0.25)',
+                    overflow: 'hidden',
+                    height: '100%',
+                    }}
+                >
+                    <div
+                        style={{
+                            maxHeight: '264px', //240,
+                            display: 'flex',
+                            flexDirection: 'column',
+                            justifyContent: 'flex-start',
+                            alignItems: 'center',
+                            padding: '15px',
+                        }}
+                    >
+                        <Typography
+                            fontSize={18}
+                            fontWeight={800}
+                            sx={{
+                            fontFamily: 'Poppins, sans-serif',
+                            textAlign: 'center',
+                            marginBottom: '15px',
+                            }}
+                        >
                         Sector Automotriz
                         </Typography>
-                    </div>
-                    <div className="card-body" style={{ background: 'white', borderBottomRightRadius: '15px', borderBottomLeftRadius: '15px' }}>
-                        <Typography variant="body2" color="text.secondary" sx={{ mb: 1, paddingLeft: '15px', paddingRight: '15px' }}>
+                        <Typography
+                            fontSize={16}
+                            fontWeight={500}
+                            sx={{
+                            fontFamily: 'Poppins, sans-serif',
+                            textAlign: 'start',
+                            }}
+                        >
                         Analizamos el flujo vial de modelos de carros por estado y ciudad, qué hacen y quiénes son tus competidores en la exportación e importación de piezas para que así puedas brindar el mejor precio a tus clientes.
                         </Typography>
-                        <div style={{ display: 'flex', justifyContent: 'center', marginTop: '5px', marginBottom: '5px' }}>
-                            <img src={auto} alt="image" style={{ maxWidth: '100%', maxHeight: '100%' }} />
-                        </div>
-                        <div style={{ display: 'flex', justifyContent: 'center' }}>
-                            <Button variant="contained" sx={{
+                    </div>
+                    <div
+                        style={{
+                            width: '100%',
+                            height: '180px',
+                            // borderTopLeftRadius: '15px',
+                            // borderTopRightRadius: '15px',
+                            backgroundColor: 'black',
+                            overflow: 'hidden',
+                        }}
+                    >
+                        <img
+                            src={auto}
+                            alt="Card Image"
+                            style={{
+                            width: '100%',
+                            height: '100%',
+                            objectFit: 'cover',
+                            objectPosition: 'center top',
+                            }}
+                        />
+                    </div>
+                    <div
+                        style={{
+                            display: 'flex',
+                            flexDirection: 'column',
+                            justifyContent: 'flex-start',
+                            alignItems: 'center',
+                            padding: '15px',
+                        }}
+                    >
+                        <Button variant="contained" sx={{
                             marginTop: '10px',
                             marginBottom: '10px',
                             alignSelf: 'flex-end',
@@ -305,27 +517,86 @@ function HeroSection() {
                             }
                             }}>
                             Botón
-                            </Button>
-                        </div>
+                        </Button>
                     </div>
-                </Container>
+                </Card>
             </SwiperSlide>
             <SwiperSlide>
-                <Container className="card" sx={{ borderRadius: '25px', maxWidth: '410px', height: '100%' }}>
-                    <div className="card-header" style={{ background: 'white', borderTopRightRadius: '15px', borderTopLeftRadius: '15px', paddingTop: '15px', paddingLeft: '15px', paddingRight: '15px' }}>
-                        <Typography variant="h5" component="div" sx={{ color: 'var(--primary)', fontFamily: 'Roboto, sans-serif' }}>
+                <Card
+                    sx={{
+                    display: 'flex',
+                    flexDirection: 'column',
+                    justifyContent: 'flex-start',
+                    alignItems: 'center',
+                    borderRadius: '15px',
+                    boxShadow: '0px 2px 4px rgba(0, 0, 0, 0.25)',
+                    overflow: 'hidden',
+                    height: '100%',
+                    }}
+                >
+                    <div
+                        style={{
+                            maxHeight: '264px', //240,
+                            display: 'flex',
+                            flexDirection: 'column',
+                            justifyContent: 'flex-start',
+                            alignItems: 'center',
+                            padding: '15px',
+                        }}
+                    >
+                        <Typography
+                            fontSize={18}
+                            fontWeight={800}
+                            sx={{
+                            fontFamily: 'Poppins, sans-serif',
+                            textAlign: 'center',
+                            marginBottom: '15px',
+                            }}
+                        >
                             Sector Alimenticio
                         </Typography>
-                    </div>
-                    <div className="card-body" style={{ background: 'white', borderBottomRightRadius: '15px', borderBottomLeftRadius: '15px' }}>
-                        <Typography variant="body2" color="text.secondary" sx={{ mb: 1, paddingLeft: '15px', paddingRight: '15px' }}>
+                        <Typography
+                            fontSize={16}
+                            fontWeight={500}
+                            sx={{
+                            fontFamily: 'Poppins, sans-serif',
+                            textAlign: 'start',
+                            }}
+                        >
                         En nuestro servicio de retailing, brindamos a nuestros clientes soluciones efectivas, para mejorar la presentación y promoción de sus productos en el punto de venta. 
                         </Typography>
-                        <div style={{ display: 'flex', justifyContent: 'center', marginTop: '5px', marginBottom: '5px' }}>
-                            <img src={alimenticio} alt="image" style={{ maxWidth: '92%', maxHeight: '100%' }} />
-                        </div>
-                        <div style={{ display: 'flex', justifyContent: 'center' }}>
-                            <Button variant="contained" sx={{
+                    </div>
+                    <div
+                        style={{
+                            width: '100%',
+                            height: '180px',
+                            // borderTopLeftRadius: '15px',
+                            // borderTopRightRadius: '15px',
+                            backgroundColor: 'black',
+                            overflow: 'hidden',
+                        }}
+                    >
+                        <img
+                            src={alimenticio}
+                            alt="Card Image"
+                            style={{
+                            width: '100%',
+                            height: '100%',
+                            objectFit: 'cover',
+                            objectPosition: 'center top',
+                            }}
+                        />
+                    </div>
+                    <div
+                        style={{
+                            display: 'flex',
+                            flexDirection: 'column',
+                            justifyContent: 'flex-start',
+                            alignItems: 'center',
+                            padding: '15px',
+                        }}
+                    >
+                        <Button variant="contained" sx={{
                             marginTop: '10px',
                             marginBottom: '10px',
                             alignSelf: 'flex-end',
@@ -338,27 +609,86 @@ function HeroSection() {
                             }
                             }}>
                             Botón
-                            </Button>
-                        </div>
+                        </Button>
                     </div>
-                </Container>
+                </Card>
             </SwiperSlide>
             <SwiperSlide>
-                <Container className="card" sx={{ borderRadius: '25px', maxWidth: '410px', height: '100%' }}>
-                    <div className="card-header" style={{ background: 'white', borderTopRightRadius: '15px', borderTopLeftRadius: '15px', paddingTop: '15px', paddingLeft: '15px', paddingRight: '15px' }}>
-                        <Typography variant="h5" component="div" sx={{ color: 'var(--primary)', fontFamily: 'Roboto, sans-serif' }}>
-                        Sector farmacéutico
+                <Card
+                    sx={{
+                    display: 'flex',
+                    flexDirection: 'column',
+                    justifyContent: 'flex-start',
+                    alignItems: 'center',
+                    borderRadius: '15px',
+                    boxShadow: '0px 2px 4px rgba(0, 0, 0, 0.25)',
+                    overflow: 'hidden',
+                    height: '100%',
+                    }}
+                >
+                    <div
+                        style={{
+                            maxHeight: '264px', //240,
+                            display: 'flex',
+                            flexDirection: 'column',
+                            justifyContent: 'flex-start',
+                            alignItems: 'center',
+                            padding: '15px',
+                        }}
+                    >
+                        <Typography
+                            fontSize={18}
+                            fontWeight={800}
+                            sx={{
+                            fontFamily: 'Poppins, sans-serif',
+                            textAlign: 'center',
+                            marginBottom: '15px',
+                            }}
+                        >
+                            Sector farmacéutico
                         </Typography>
-                    </div>
-                    <div className="card-body" style={{ background: 'white', borderBottomRightRadius: '15px', borderBottomLeftRadius: '15px' }}>
-                        <Typography variant="body2" color="text.secondary" sx={{ mb: 1, paddingLeft: '15px', paddingRight: '15px' }}>
+                        <Typography
+                            fontSize={16}
+                            fontWeight={500}
+                            sx={{
+                            fontFamily: 'Poppins, sans-serif',
+                            textAlign: 'start',
+                            }}
+                        >
                         Analizamos a los competidores, ventajas competitivas y precios para proporcionar un enfoque personalizado para cada uno de nuestros clientes.
                         </Typography>
-                        <div style={{ display: 'flex', justifyContent: 'center', marginTop: '5px', marginBottom: '5px' }}>
-                            <img src={farma} alt="image" style={{ maxWidth: '100%', maxHeight: '100%' }} />
-                        </div>
-                        <div style={{ display: 'flex', justifyContent: 'center' }}>
-                            <Button variant="contained" sx={{
+                    </div>
+                    <div
+                        style={{
+                            width: '100%',
+                            height: '180px',
+                            // borderTopLeftRadius: '15px',
+                            // borderTopRightRadius: '15px',
+                            backgroundColor: 'black',
+                            overflow: 'hidden',
+                        }}
+                    >
+                        <img
+                            src={farma}
+                            alt="Card Image"
+                            style={{
+                            width: '100%',
+                            height: '100%',
+                            objectFit: 'cover',
+                            objectPosition: 'center top',
+                            }}
+                        />
+                    </div>
+                    <div
+                        style={{
+                            display: 'flex',
+                            flexDirection: 'column',
+                            justifyContent: 'flex-start',
+                            alignItems: 'center',
+                            padding: '15px',
+                        }}
+                    >
+                        <Button variant="contained" sx={{
                             marginTop: '10px',
                             marginBottom: '10px',
                             alignSelf: 'flex-end',
@@ -371,29 +701,86 @@ function HeroSection() {
                             }
                             }}>
                             Botón
-                            </Button>
-                        </div>
+                        </Button>
                     </div>
-                </Container>
+                </Card>
             </SwiperSlide>
             <SwiperSlide>
-                <Container className="card" sx={{ borderRadius: '25px', maxWidth: '410px', height: '100%' }}>
-                    <div className="card-header" style={{ background: 'white', borderTopRightRadius: '15px', borderTopLeftRadius: '15px', paddingTop: '15px', paddingLeft: '15px', paddingRight: '15px' }}>
-                        <Typography variant="h5" component="div" sx={{ color: 'var(--primary)', fontFamily: 'Roboto, sans-serif' }}>
+                <Card
+                    sx={{
+                    display: 'flex',
+                    flexDirection: 'column',
+                    justifyContent: 'flex-start',
+                    alignItems: 'center',
+                    borderRadius: '15px',
+                    boxShadow: '0px 2px 4px rgba(0, 0, 0, 0.25)',
+                    overflow: 'hidden',
+                    height: '100%',
+                    }}
+                >
+                    <div
+                        style={{
+                            maxHeight: '264px', //240,
+                            display: 'flex',
+                            flexDirection: 'column',
+                            justifyContent: 'flex-start',
+                            alignItems: 'center',
+                            padding: '15px',
+                        }}
+                    >
+                        <Typography
+                            fontSize={18}
+                            fontWeight={800}
+                            sx={{
+                            fontFamily: 'Poppins, sans-serif',
+                            textAlign: 'center',
+                            marginBottom: '15px',
+                            }}
+                        >
                             Sector Vialidad
                         </Typography>
-                    </div>
-                    <div className="card-body" style={{ background: 'white', borderBottomRightRadius: '15px', borderBottomLeftRadius: '15px' }}>
-                        <Typography variant="body2" color="text.secondary" sx={{ mb: 1, paddingLeft: '15px', paddingRight: '15px' }}>
-                        Nuestro análisis del movimiento vial, DOT, DOE y DOM, es vital para el desarrollo de estrategias de transporte y logística.
+                        <Typography
+                            fontSize={16}
+                            fontWeight={500}
+                            sx={{
+                            fontFamily: 'Poppins, sans-serif',
+                            textAlign: 'start',
+                            }}
+                        >
+                        Nuestro análisis del movimiento vial, DOT, DOE y DOM, es vital para el desarrollo de estrategias de transporte y logística.<br/><br/>
                         </Typography>
-                        <br/>
-                        <div style={{ display: 'flex', justifyContent: 'center', marginTop: '5px', marginBottom: '5px' }}>
-                            <img src={auto} alt="image" style={{ maxWidth: '100%', maxHeight: '100%' }} />
-                        </div>
-                        <br/>
-                        <div style={{ display: 'flex', justifyContent: 'center' }}>
-                            <Button variant="contained" sx={{
+                    </div>
+                    <div
+                        style={{
+                            width: '100%',
+                            height: '180px',
+                            // borderTopLeftRadius: '15px',
+                            // borderTopRightRadius: '15px',
+                            backgroundColor: 'black',
+                            overflow: 'hidden',
+                        }}
+                    >
+                        <img
+                            src={auto}
+                            alt="Card Image"
+                            style={{
+                            width: '100%',
+                            height: '100%',
+                            objectFit: 'cover',
+                            objectPosition: 'center top',
+                            }}
+                        />
+                    </div>
+                    <div
+                        style={{
+                            display: 'flex',
+                            flexDirection: 'column',
+                            justifyContent: 'flex-start',
+                            alignItems: 'center',
+                            padding: '15px',
+                        }}
+                    >
+                        <Button variant="contained" sx={{
                             marginTop: '10px',
                             marginBottom: '10px',
                             alignSelf: 'flex-end',
@@ -406,28 +793,86 @@ function HeroSection() {
                             }
                             }}>
                             Botón
-                            </Button>
-                        </div>
+                        </Button>
                     </div>
-                </Container>
+                </Card>
             </SwiperSlide>
             <SwiperSlide>
-                <Container className="card" sx={{ borderRadius: '25px', maxWidth: '410px', height: '100%' }}>
-                    <div className="card-header" style={{ background: 'white', borderTopRightRadius: '15px', borderTopLeftRadius: '15px', paddingTop: '15px', paddingLeft: '15px', paddingRight: '15px' }}>
-                        <Typography variant="h5" component="div" sx={{ color: 'var(--primary)', fontFamily: 'Roboto, sans-serif' }}>
-                        Sector de Logística
+                <Card
+                    sx={{
+                    display: 'flex',
+                    flexDirection: 'column',
+                    justifyContent: 'flex-start',
+                    alignItems: 'center',
+                    borderRadius: '15px',
+                    boxShadow: '0px 2px 4px rgba(0, 0, 0, 0.25)',
+                    overflow: 'hidden',
+                    height: '100%',
+                    }}
+                >
+                    <div
+                        style={{
+                            maxHeight: '264px', //240,
+                            display: 'flex',
+                            flexDirection: 'column',
+                            justifyContent: 'flex-start',
+                            alignItems: 'center',
+                            padding: '15px',
+                        }}
+                    >
+                        <Typography
+                            fontSize={18}
+                            fontWeight={800}
+                            sx={{
+                            fontFamily: 'Poppins, sans-serif',
+                            textAlign: 'center',
+                            marginBottom: '15px',
+                            }}
+                        >
+                            Sector de Logística
                         </Typography>
-                    </div>
-                    <div className="card-body" style={{ background: 'white', borderBottomRightRadius: '15px', borderBottomLeftRadius: '15px' }}>
-                        <Typography variant="body2" color="text.secondary" sx={{ mb: 1, paddingLeft: '15px', paddingRight: '15px' }}>
+                        <Typography
+                            fontSize={16}
+                            fontWeight={500}
+                            sx={{
+                            fontFamily: 'Poppins, sans-serif',
+                            textAlign: 'start',
+                            }}
+                        >
                         Contamos con procesos correctivos para garantizar la efectividad de las entregas y gestión de almacén, creando rutas eficientes, inventarios óptimos y asesoría en comercio exterior.
                         </Typography>
-                        <br/>
-                        <div style={{ display: 'flex', justifyContent: 'center', marginTop: '5px', marginBottom: '5px' }}>
-                            <img src={logistica} alt="image" style={{ maxWidth: '100%', maxHeight: '100%' }} />
-                        </div>
-                        <div style={{ display: 'flex', justifyContent: 'center' }}>
-                            <Button variant="contained" sx={{
+                    </div>
+                    <div
+                        style={{
+                            width: '100%',
+                            height: '180px',
+                            // borderTopLeftRadius: '15px',
+                            // borderTopRightRadius: '15px',
+                            backgroundColor: 'black',
+                            overflow: 'hidden',
+                        }}
+                    >
+                        <img
+                            src={logistica}
+                            alt="Card Image"
+                            style={{
+                            width: '100%',
+                            height: '100%',
+                            objectFit: 'cover',
+                            objectPosition: 'center top',
+                            }}
+                        />
+                    </div>
+                    <div
+                        style={{
+                            display: 'flex',
+                            flexDirection: 'column',
+                            justifyContent: 'flex-start',
+                            alignItems: 'center',
+                            padding: '15px',
+                        }}
+                    >
+                        <Button variant="contained" sx={{
                             marginTop: '10px',
                             marginBottom: '10px',
                             alignSelf: 'flex-end',
@@ -440,30 +885,87 @@ function HeroSection() {
                             }
                             }}>
                             Botón
-                            </Button>
-                        </div>
+                        </Button>
                     </div>
-                </Container>
+                </Card>
             </SwiperSlide>
             <SwiperSlide>
-                <Container className="card" sx={{ borderRadius: '25px', maxWidth: '410px', height: '100%' }}>
-                    <div className="card-header" style={{ background: 'white', borderTopRightRadius: '15px', borderTopLeftRadius: '15px', paddingTop: '15px', paddingLeft: '15px', paddingRight: '15px' }}>
-                        <Typography variant="h5" component="div" sx={{ color: 'var(--primary)', fontFamily: 'Roboto, sans-serif' }}>
-                        Sector de Plazas Comerciales
+                <Card
+                    sx={{
+                    display: 'flex',
+                    flexDirection: 'column',
+                    justifyContent: 'flex-start',
+                    alignItems: 'center',
+                    borderRadius: '15px',
+                    boxShadow: '0px 2px 4px rgba(0, 0, 0, 0.25)',
+                    overflow: 'hidden',
+                    height: '100%',
+                    }}
+                >
+                    <div
+                        style={{
+                            maxHeight: '264px', //240,
+                            height: '190px',
+                            display: 'flex',
+                            flexDirection: 'column',
+                            justifyContent: 'flex-start',
+                            alignItems: 'center',
+                            padding: '15px',
+                        }}
+                    >
+                        <Typography
+                            fontSize={18}
+                            fontWeight={800}
+                            sx={{
+                            fontFamily: 'Poppins, sans-serif',
+                            textAlign: 'center',
+                            marginBottom: '15px',
+                            }}
+                        >
+                            Sector de Plazas Comerciales
                         </Typography>
-                    </div>
-                    <div className="card-body" style={{ background: 'white', borderBottomRightRadius: '15px', borderBottomLeftRadius: '15px' }}>
-                        <Typography variant="body2" color="text.secondary" sx={{ mb: 1, paddingLeft: '15px', paddingRight: '15px' }}>
+                        <Typography
+                            fontSize={16}
+                            fontWeight={500}
+                            sx={{
+                            fontFamily: 'Poppins, sans-serif',
+                            textAlign: 'start',
+                            }}
+                        >
                         Medimos el flujo de personas, preferencias de consumo y análisis de compra.
                         </Typography>
-                        <br/>
-                        <div style={{ display: 'flex', justifyContent: 'center', marginTop: '5px', marginBottom: '5px' }}>
-                            <img src={logistica} alt="image" style={{ maxWidth: '100%', maxHeight: '100%' }} />
-                        </div>
-                        <br/>
-                        <br/>
-                        <div style={{ display: 'flex', justifyContent: 'center' }}>
-                            <Button variant="contained" sx={{
+                    </div>
+                    <div
+                        style={{
+                            width: '100%',
+                            height: '180px',
+                            // borderTopLeftRadius: '15px',
+                            // borderTopRightRadius: '15px',
+                            backgroundColor: 'black',
+                            overflow: 'hidden',
+                        }}
+                    >
+                        <img
+                            src={logistica}
+                            alt="Card Image"
+                            style={{
+                            width: '100%',
+                            height: '100%',
+                            objectFit: 'cover',
+                            objectPosition: 'center top',
+                            }}
+                        />
+                    </div>
+                    <div
+                        style={{
+                            display: 'flex',
+                            flexDirection: 'column',
+                            justifyContent: 'flex-start',
+                            alignItems: 'center',
+                            padding: '15px',
+                        }}
+                    >
+                        <Button variant="contained" sx={{
                             marginTop: '10px',
                             marginBottom: '10px',
                             alignSelf: 'flex-end',
@@ -476,10 +978,9 @@ function HeroSection() {
                             }
                             }}>
                             Botón
-                            </Button>
-                        </div>
+                        </Button>
                     </div>
-                </Container>
+                </Card>
             </SwiperSlide>
         </Swiper>
       </Box>
